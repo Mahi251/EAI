@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: all 0.4s ease;
+}
+:root{
+    --bg-color:#ffffff;
+    --text-color-header:#000000;
+    --text-color:#fff;
+    --second-color:#4CAF4F;
+    --main-color:#FF7B01;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-color);
+    color: var(--big-font);
+}
+
+
+
+
+/* Navbar Styles */
+#header{
+    background-color: white;
+    border-bottom: 2px solid green;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2; /* Ensures navbar stays above the dropdown menu */
+}
+
+.navheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: green;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: flex; /* Display burger menu by default */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 3; /* Ensures burger menu stays above the dropdown */
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: green;
+    margin: 4px 0;
+    transition: background-color 0.3s;
+}
+
+/* Dropdown Menu Styles */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurred background effect */
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out; /* Slide-down animation */
+    z-index: 1; /* Lower z-index to keep the burger menu above */
+}
+
+.navbar.active {
+    transform: translateY(0); /* Slide-down transition */
+}
+.nav-logo img{
+    width: 150px;
+}
+
+.navbar li {
+    margin: 20px 0;
+}
+
+.navbar a {
+    color: green;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: orange;
+}

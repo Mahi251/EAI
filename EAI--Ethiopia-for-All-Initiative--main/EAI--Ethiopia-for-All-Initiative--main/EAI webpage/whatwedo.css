@@ -1,0 +1,933 @@
+/*////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+
+            SECOND MAGE
+
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+////////////////////////////////////////////
+///////////////////////////////////////////*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: all 0.4s ease;
+}
+
+:root{
+--bg-color:#ffffff;
+--text-color-header:#000000;
+--text-color:#fff;
+--second-color:#4CAF4F;
+--main-color:#FF7B01;
+}
+
+body{
+background: var(--bg-color);
+color: var(--big-font);
+} 
+
+header{
+width: 100%;
+height: 150px;
+top: -2;
+right: -2;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: #4caf4f00;
+padding: 50px 20px;
+transform: all .40s ease;
+border: 2px solid;
+border-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--second-color), rgba(255, 255, 255, 0)) 1;
+padding: 20px;    
+}
+.navbar{
+display: flex;
+align-items: center;
+justify-content: space-around;
+background: transparent;
+}
+.nav-logo img{
+width: 150px;
+}
+
+.navbar li img{
+    width: 35px;
+    height: 35px;
+}
+.navbar li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar a{
+    color: var(--text-color-header);
+    font-weight: 600;
+    font-size: var(--p-font);
+    padding:10px 22px;
+    transition: all .40s ease;
+    text-decoration: none;
+    position: relative;
+    color: #004d00;
+    transition: color 0.3s ease;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+#active_link{
+    color: var(--main-color);
+}
+#active_link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    width: 50%;
+    height: 2px;
+    background-color: var(--main-color); 
+}
+.navbar a:hover::after{
+    width: 45%;
+}
+
+#donationlink a{
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #fff;
+    border: 2px solid var(--main-color);
+}
+#donationlink a:hover{
+    background-color: #fff;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+#donationlink a:hover::after{
+    width: 0%;
+}
+
+
+
+
+
+
+/* Dropdown container styling */
+.dropdown {
+    position: relative;
+    display: none !important;
+
+  }
+
+
+  /* Hamburger menu button */
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  /* Hamburger lines */
+  .menu-button div {
+    background-color: black;
+    height: 4px;
+    width: 25px;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dropdown.active .line1 {
+    transform: rotate(45deg) translate(5.7px, 5.7px);
+  }
+  
+  .dropdown.active .line2 {
+    opacity: 0; 
+  }
+  
+  .dropdown.active .line3 {
+    transform: rotate(-45deg) translate(5.7px, -5.7px);
+  }
+  
+  /* Back to hamburger */
+  .menu-button .line1,
+  .menu-button .line2,
+  .menu-button .line3 {
+    height: 3px;
+    background-color: var(--second-color);
+    transform: none;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  
+  /* Dropdown content styling */
+  .small-navbar {
+    position: fixed; 
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    top: 100px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    height: 100%;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  /* Dropdown content items */
+.small-navbar li, .small-navbar li a{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: #004d00;
+}
+.small-navbar .book{
+    margin-right: 10px;
+}
+.small-navbar img{
+    width: 34px;
+}
+  
+.small-navbar a:hover {
+    color:#FF7B01;
+}
+.small-navbar #donationlink a{
+    width: 200px;
+}
+
+/* Show dropdown */
+.dropdown.active .small-navbar {
+    max-height: 100vh;
+    opacity: 1;
+}
+
+
+
+#no-scroll .stay-up-to-date {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////First & second box////////////*/
+
+
+
+.topictext {
+    position: relative;
+    width: 80%;
+    padding: 50px;
+    margin: 50px auto 0px auto;
+    background-color: #fff;
+    border-radius: 20px; /* Curved edges */
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden; /* Ensure the pseudo-element doesn’t overflow */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1); /* Optional inner shadow */
+}
+
+.topictext::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; /* Match the border radius of the div */
+    padding: 2px; /* Control the thickness of the border */
+    background: linear-gradient(to bottom, var(--main-color),#FF7B01, rgba(255, 255, 255, 0));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
+
+
+.topictext h2{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 30px;
+    color: var(--second-color);
+}
+
+
+
+
+
+
+/*/////////////   CARDS   //////////////////*/
+
+
+.cards{
+    display: grid;
+    padding: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cards div:not(.text){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid #fff;
+    box-shadow: 10px 10px 10px #00000010;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.cards div:not(.text):hover{
+    box-shadow: 10px 10px 10px #00000030;
+    transform: translateY(-10px);
+    border: 1px solid var(--bg-color);
+}
+
+.cards .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.text h1{
+    font-weight: 300;
+    font-size: 25px;
+    color: var(--second-color);
+    text-transform: uppercase;
+
+}
+.cards div p{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.cards img{
+    width: 150px;
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////FOOTER //////////////////*/
+
+
+
+
+.footer {
+    margin-top: 150px;
+    background: linear-gradient(to bottom, #003703, #000000);
+    color: #dcdcdc;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/*---- Footer Donation ----*/
+
+.footer-donation h3 {
+    font-size: 2em;
+    color: #d5f9d6;
+}
+
+.footer-donation .donate-button {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    background-color: #228b22;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-donation .donate-button:hover {
+    background-color: #002a00;
+    border: 2px inset transparent;
+    border-radius: 5px;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #6efe73, rgba(255, 255, 255, 0)) 1;
+}
+.footer-donation .donate-button:active{
+    border: 2px solid #6efe73;
+    border-radius: 20px;
+}
+
+
+/*---- Footer About us ----*/
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.company-links li{
+    height: 40px;
+    display: flex;
+    align-self: center;
+    text-align: center;
+}
+
+.footer-links h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #00a900;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    display: flex;
+    align-items: center;
+    color: #dcdcdc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #4CAF4F;
+}
+.footer-links img{
+    margin-right: 10px;
+    width: 40px;
+}
+
+
+/*---- Footer Contact us ----*/
+
+.support-links li{
+    height: 40px;
+    display: flex;
+    align-self: center;
+    text-align: center;
+}
+.subscribe-form {
+    display: flex;
+    align-items: center; 
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+    width: 220px;
+    background: #ffffff20;
+    color: #ffffff;
+}
+
+.subscribe-form input::placeholder {
+    color: #ffffff75;
+}
+
+.subscribe-form button {
+    width: 60px;
+    height: 40px;
+    padding: 10px;
+    background-color: #ffffff20;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.footer-right img{
+    opacity: 0.7;
+    width: 100%;
+}
+
+.subscribe-form button:hover {
+    background-color: #1e7b1e;
+}
+
+.stay-up-to-date h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #dcdcdc;
+}
+
+.footer-map {
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    color: #dcdcdc;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////FOOTER //////////////////*/
+
+
+
+
+.footer {
+    margin-top: 150px;
+    background: linear-gradient(to bottom, #003703, #000000);
+    color: #dcdcdc;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/*---- Footer Donation ----*/
+
+.footer-donation h3 {
+    font-size: 2em;
+    color: #00a900;
+}
+
+.footer-donation .donate-button {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    background-color: #228b22;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-donation .donate-button:hover {
+    background-color: #002a00;
+    border: 2px inset transparent;
+    border-radius: 5px;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #6efe73, rgba(255, 255, 255, 0)) 1;
+}
+.footer-donation .donate-button:active{
+    border: 2px solid #6efe73;
+    border-radius: 20px;
+}
+
+
+/*---- Footer About us ----*/
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.company-links li{
+    height: 40px;
+    display: flex;
+    align-self: center;
+    text-align: center;
+}
+
+.footer-links h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #00a900;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    display: flex;
+    align-items: center;
+    color: #dcdcdc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #4CAF4F;
+}
+.footer-links img{
+    margin-right: 10px;
+    width: 40px;
+}
+
+
+/*---- Footer Contact us ----*/
+
+.support-links li{
+    height: 40px;
+    display: flex;
+    align-self: center;
+    text-align: center;
+}
+.subscribe-form {
+    display: flex;
+    align-items: center; 
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    border: 2px solid #1e7b1e;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+    width: 230px;
+    background: #ffffff20;
+    color: #ffffff;
+}
+
+.subscribe-form input::placeholder {
+    color: #ffffff75;
+}
+
+.subscribe-form button {
+    width: 60px;
+    height: 47px;
+    padding: 15px;
+    background-color: #ffffff20;
+    border: 2px solid #1e7b1e;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.footer-right img{
+    opacity: 0.7;
+    width: 100%;
+}
+
+.subscribe-form button:hover {
+    background-color: #1e7b1e;
+}
+
+.stay-up-to-date h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #dcdcdc;
+}
+
+.footer-map {
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    color: #dcdcdc;
+    font-size: 0.9em;
+}
+
+
+
+
+/*///////////RESPONSIVENESS////////////////////////*/
+
+@media (max-width: 1110px) {
+    header{
+        height: 100px;
+        top: -2;
+        right: -2;
+        padding: 10px 10px;
+    }
+    .navheader {
+        font-size: small;
+        padding: 5px 10px;
+    }
+    .nav-logo img{
+        width: 100px;
+    }
+    .navbar a{
+        font-size: small;
+        font-weight: 500;
+        padding: 0px;
+        padding-right: 20px;
+    }
+    .navbar a::after{
+        left: 40%;
+    }
+    #active_link::after{
+        left: 40%;
+    }
+    #donationlink a{
+        padding: 10px 22px;
+    }
+
+    .cards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+    .cards div:not(.text){
+        min-width: 200px; 
+
+    }
+
+    /*Footet/---------------------------*/
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto; 
+        gap: 20px;
+        }
+    
+        .footer-donation {
+        justify-self: center;
+        grid-column: 1; 
+        grid-row: 2; 
+        }
+    
+        .footer-links {
+        justify-content: space-evenly;
+        grid-column: span 2; 
+        grid-row: 1;
+        }
+    
+        .footer-right {
+        grid-column: 2;
+        grid-row: 2;
+        }
+}
+
+
+@media (max-width: 825px) {
+    .navbar{
+        display: none;
+    }
+
+    .dropdown{
+        display: inline-block !important;
+    }
+    .menu-button{
+        display:block;
+    }
+    .topictext p{
+        font-weight: 100;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+
+}
+
+
+@media (max-width:660px) {
+    .cards p{
+        font-size: 12px;
+    }
+}
+
+
+
+
+@media (max-width:580px) {
+    .topictext p{
+        text-align: justify;
+        font-size: 12px;
+    }
+    .topictext h2{
+        font-size: 22px;
+    }
+    .cards img{
+        width: 100px;
+    }
+    .text h1{
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer-links{
+        flex-direction: row;
+        text-align: center;
+    }
+    .footer-links div, .footer-links ul{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .support-links li{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width:480px) {
+    .cards{
+        margin-top: 20px;
+        padding: 0;
+    }
+    .cards div{
+        flex-direction: column;
+    }
+    .cards div img{
+        width: 75px;
+        align-self: flex-end;
+    }
+    .text h1{
+        width: 75%;
+        margin-top: -50px;
+    }
+    
+    /*FOOTER/----------------------*/
+    .footer{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .footer-links{
+        flex-direction: column;
+    }
+    .support-links ul li{
+        justify-content: center;
+    }
+
+}

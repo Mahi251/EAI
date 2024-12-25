@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Fonts Link for Montserrat and Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="publications.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="./images/LOGO.png" alt="" >
+            </a>
+        </div>
+
+        <ul class="navbar" id="navLinks">
+            <li><img src="images/info1.png" alt=""><a href="index.html">Who Are We</a></li>
+            <li><img src="images/help1.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+            <li><img src="images/involved 1.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+            <li><img src="images/book.png" alt=""><a href="#home" id="active_link">Publication</a></li>
+            <li id="donationlink"><a href="donation.html">DONATION</a></li>
+        </ul>
+
+
+
+        
+        
+        <div class="dropdown">
+            <li class="menu-button" onclick="DOMContentLoaded()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </li>
+            
+            <div class="small-navbar" id="navLinks" onclick="toggleDropdown()">
+                <li><img src="images/info1.png" alt=""><a href="#home">Who Are We</a></li>
+                <li><img src="images/help1.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+                <li><img src="images/involved 1.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+                <li><img class="book" src="images/book.png" alt=""><a href="publication.html">Publication</a></li>
+                <li id="donationlink"><a href="donation.html">DONATION</a></li>
+            </div>
+        </div>
+
+     </header>
+
+
+
+<!--Font Awesome CDN ///////// Used for arrow marks on the left and right key-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+ 
+<div class="imagecontainer">
+    <div class="slider-container">
+        <div class="slide">
+            <div id="sliderImage" class="item" style="background-image: url(images/woman\ impowerment.JPG);">
+            </div>
+            <div id="sliderImage" class="item" style="background-image: url(images/training-woman.JPG);">
+            </div>
+            <div id="sliderImage" class="item" style="background-image: url(images/educating-woman.JPG);">
+            </div>
+            <div id="sliderImage" class="item" style="background-image: url(images/EAI\ Baord\ Member\ and\ voulnteers.jpg);">
+            </div>
+            <div id="sliderImage" class="item" style="background-image: url(images/training-men.JPG);">
+            </div>
+            <div id="sliderImage" class="item" style="background-image: url(images/bilal-colaboration.JPG);">
+            </div>
+        </div>
+
+        <div class="left-right">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div> 
+</div>
+
+
+
+
+    
+
+
+
+
+
+
+<!--/////////    News and stories    /////////////////////////////////-->
+
+
+
+
+
+<div class="news-case-stories">
+    <h2>Latest News & Case Stories</h2>
+
+    <div class="stories-grid">
+      <article class="story">
+        <img src="images/training1.JPG" alt="News Image 1">
+        <h3>Story Title 1</h3>
+        <p class="date">Published on October 23, 2024</p>
+        <p class="description">This is a brief description of the first news or case story. It draws readers in to learn more about the details.</p>
+        <a href="#story"  class="read-more-button" data-title="Story Title 1">Read More</a>
+      </article>
+
+      <article class="story">
+        <img src="images/training2.JPG" alt="News Image 2">
+        <h3>Story Title 2</h3>
+        <p class="date">Published on October 20, 2024</p>
+        <p class="description">This is a brief description of the second story. It talks about another case or news topic that is relevant to the audience.</p>
+        <a href="#story"  class="read-more-button" data-title="Story Title 2">Read More</a>
+      </article>
+
+      <article class="story">
+        <img src="images/traning3.JPG" alt="News Image 3">
+        <h3>Story Title 3</h3>
+        <p class="date">Published on October 18, 2024</p>
+        <p class="description">A quick overview of another exciting news or case study that captures the attention of your readers.</p>
+        <a href="#story"  class="read-more-button" data-title="Story Title 3">Read More</a>
+      </article>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!----FOOTER--------------------------------------------------------------->
+    
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section: Donation Info -->
+        <div class="footer-donation">
+            <h3>Donation</h3>
+            <a href="donation.html">
+                <button class="donate-button">DONATE</button>
+            </a>
+        </div>
+
+        <!-- Center Section: Company and Support Links -->
+        <div class="footer-links">
+            <div class="company-links">
+                <h3>About Us</h3>
+                <ul>
+                    <li><img class="first" src="images/info.png" alt=""><a href="index.html">Who We Are</a></li>
+                    <li><img src="images/help.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+                    <li><img src="images/involved.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+                </ul>
+            </div>
+            <div class="support-links"> 
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><img src="images/Message_light.png" alt="" srcset=""><a href="#">Ethiopiaforall2020@gmail.com</a></li>
+                    <li><img src="images/phone.png" alt=""><a href="#">+251 96 670 0009</a></li>
+                    <li><img src="images/location-pin.png" alt=""><a href="#">XP9J+9JQ Addis Ababa</a></li>
+                    <!-- <li><a href="#">Privacy Policy</a></li> -->
+                </ul>
+            </div>
+        </div>    
+        
+        <!-- Right Section: Stay Updated and Map -->
+        <div class="footer-right">
+            <div class="stay-up-to-date">
+                <h3>Stay up to date</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">
+                        <img src="images/send.png" alt="">    
+                    </button>
+                </form>
+            </div>
+            <div class="footer-map">
+                <!-- Embeded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7882.064306021976!2d38.729405495353696!3d8.96918434190648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNTgnMDYuNSJOIDM4wrA0Myc1My44IkU!5e0!3m2!1sen!2set!4v1723798404400!5m2!1sen!2set" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Ethiopia for All Initiative. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+</body>
+<script src="publication.js"></script>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Fonts Link for Montserrat and Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Getinvolved.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="./images/LOGO.png" alt="" >
+            </a>
+        </div>
+
+        <ul class="navbar" id="navLinks">
+            <li><img src="images/info1.png" alt=""><a href="index.html">Who Are We</a></li>
+            <li><img src="images/help1.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+            <li><img src="images/involved 1.png" alt=""><a href="#" id="active_link">Get Involved</a></li>
+            <li><img src="images/book.png" alt=""><a href="publication.html">Publication</a></li>
+            <li id="donationlink"><a href="donation.html">DONATION</a></li>
+        </ul>
+
+
+
+        
+        <div class="dropdown">
+            <li class="menu-button" onclick="DOMContentLoaded()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </li>
+            
+            <div class="small-navbar" id="navLinks" onclick="toggleDropdown()">
+                <li><img src="images/info1.png" alt=""><a href="#home">Who Are We</a></li>
+                <li><img src="images/help1.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+                <li><img src="images/involved 1.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+                <li><img class="book" src="images/book.png" alt=""><a href="publication.html">Publication</a></li>
+                <li id="donationlink"><a href="donation.html">DONATION</a></li>
+            </div>
+        </div>
+
+     </header>
+
+
+
+
+
+    <div class="middletext">
+
+        <div class="volenteers">
+            <div class="text">
+                <h3>
+                    Membership and Volunteers
+
+                </h3>
+                <p>
+                    EAI seeks financial, material, and ideal support from individual members and organizations.
+                    Digging out and utilizing all forms of support available from volunteers is critical for Ethiopia for All Initiative. The volunteer might serve as volunteer for EAI by giving labor support, providing constructive ideas, and skill/technical support.
+
+                </p>
+            </div>
+                <img src="" alt="">
+        </div>
+        
+        
+        <div class="partner">
+            <div class="text">
+                <h3>
+                    Partner With Us
+                </h3>
+                <p>
+                    EAI is open to partner with similar minded stakeholders and partners. Thus, EAI invites any organization: UN Agencies, International and Local Nongovernmental Organizations, Corporate offices, Private Sectors and Individual’s Philanthropist to engage in relevant activities with us.
+                </p>
+            </div>
+                <img src="images/" alt="">
+        </div>
+        
+    </div>
+
+
+
+<div class="body">
+
+
+    <div class="form-container">
+        <h2>VOLENTEER FORM</h2>
+        <p>EAI seeks financial, material, and ideal support from individual members and organizations.</p>
+        <form id="personForm" action="#" method="POST">
+            <!-- Name and Father's Name (Side by Side) -->
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="fatherName" name="fatherName" placeholder=" " required>
+                    <label for="fatherName">Father's Name</label>
+                </div>
+            </div>
+            <!-- Age -->
+            <div class="form-group">
+                <input type="number" id="age" name="age" placeholder=" " min="1" max="120" required>
+                <label for="age">Age</label>
+            </div>
+            <!-- Qualification -->
+            <div class="form-group">
+                <input type="text" id="qualification" name="qualification" placeholder=" " required>
+                <label for="qualification">Qualification</label>
+            </div>
+            <!-- Phone Number -->
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder=" " pattern="[0-9]{10}" required>
+                <label for="phone">Phone Number</label>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+        
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!----FOOTER--------------------------------------------------------------->
+    
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section: Donation Info -->
+        <div class="footer-donation">
+            <h3>Donation</h3>
+            <a href="donation.html">
+                <button class="donate-button">DONATE</button>
+            </a>
+        </div>
+
+        <!-- Center Section: Company and Support Links -->
+        <div class="footer-links">
+            <div class="company-links">
+                <h3>About Us</h3>
+                <ul>
+                    <li><img class="first" src="images/info.png" alt=""><a href="index.html">Who We Are</a></li>
+                    <li><img src="images/help.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+                    <li><img src="images/involved.png" alt=""><a href="#">Get Involved</a></li>
+                </ul>
+            </div>
+            <div class="support-links"> 
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><img src="images/Message_light.png" alt="" srcset=""><a href="#">Ethiopiaforall2020@gmail.com</a></li>
+                    <li><img src="images/phone.png" alt=""><a href="#">+251 96 670 0009</a></li>
+                    <li><img src="images/location-pin.png" alt=""><a href="#">XP9J+9JQ Addis Ababa</a></li>
+                    <!-- <li><a href="#">Privacy Policy</a></li> -->
+                </ul>
+            </div>
+        </div>    
+        
+        <!-- Right Section: Stay Updated and Map -->
+        <div class="footer-right">
+            <div class="stay-up-to-date">
+                <h3>Stay up to date</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">
+                        <img src="images/send.png" alt="">    
+                    </button>
+                </form>
+            </div>
+            <div class="footer-map">
+                <!-- Embeded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7882.064306021976!2d38.729405495353696!3d8.96918434190648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNTgnMDYuNSJOIDM4wrA0Myc1My44IkU!5e0!3m2!1sen!2set!4v1723798404400!5m2!1sen!2set" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Ethiopia for All Initiative. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+<script src="getinvolved.js"></script>
+
+</body>
+</html>

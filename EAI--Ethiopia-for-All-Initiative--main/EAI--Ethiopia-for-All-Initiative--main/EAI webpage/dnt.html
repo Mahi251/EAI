@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in || Sign up from</title>
+     <!-- font awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- css stylesheet -->
+    <link rel="stylesheet" href="dnt.css">
+
+</head>
+
+
+<body>
+
+<div class="body">
+    <div class="container" id="container">
+
+
+            <div class="donation-option">
+        
+                <p>A option of your choice</p>
+                <!-- Preset donation amount buttons -->
+                <div class="donation-options" id="donationOptions">
+                    <button onclick="toggleAmount(this, 50)">50 Birr</button>
+                    <button onclick="toggleAmount(this, 100)">100 Birr</button>
+                    <button onclick="toggleAmount(this, 250)">250 Birr</button>
+                    <button onclick="toggleAmount(this, 500)">500 Birr</button>
+                    <button onclick="toggleAmount(this, 750)">750 Birr</button>
+                    <button onclick="toggleAmount(this, 1000)">1000 Birr</button>
+                </div>
+        
+                <!-- Custom donation amount input -->
+                <div class="custom-amount" id="customAmount">
+                    <p>Make a custom donation</p>
+                    <input type="number" id="customDonation" placeholder=" Enter amount" step="50" min="0" onfocus="removePlaceholder()">
+                    <label class="underline"></label>
+                </div>
+        
+                <!-- Confirm button -->
+                <button class="confirm-button" onclick="">Confirm</button>
+            </div>
+            <div class="textbox">
+                <h1>Donation Center</h1>
+                <p>Help us make a difference</p>
+            </div>
+    </div> 
+</div>
+
+
+    <script>
+        function removePlaceholder() {
+        const textField = document.getElementById('customDonation');
+        textField.placeholder = ''; // Remove the placeholder when the field gets focus
+    }
+
+    // Function to toggle active state like checkboxes
+    function toggleAmount(button, amount) {
+        // Toggle the 'active' class for the clicked button
+        button.classList.toggle('active');
+        
+        // Log the state of each button (active/inactive)
+        console.log(amount + " Birr is now " + (button.classList.contains('active') ? "selected" : "deselected"));
+    }
+
+    </script>
+</body>
+</html>

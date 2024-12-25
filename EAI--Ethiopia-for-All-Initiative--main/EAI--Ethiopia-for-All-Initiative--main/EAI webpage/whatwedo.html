@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- Google Fonts Link for Montserrat and Poppins -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="whatwedo.css">
+</head>
+<body>
+        <header>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img onclick="openhomepage()" src="./images/LOGO.png" alt="" >
+                </a>
+            </div>
+
+            <ul class="navbar">
+                <li><img src="images/info1.png" alt=""><a href="index.html">Who Are We</a></li>
+                <li><img src="images/help1.png" alt=""><a href="whatwedo.html" id="active_link">What We Do</a></li>
+                <li><img src="images/involved 1.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+                <li><img src="images/book.png" alt=""><a href="publication.html">Publication</a></li>
+                <li id="donationlink"><a href="donation.html">DONATION</a></li>
+            </ul>
+
+
+
+            
+        <div class="dropdown">
+            <li class="menu-button" onclick="DOMContentLoaded()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </li>
+            
+            <div class="small-navbar" id="navLinks" onclick="toggleDropdown()">
+                <li><img src="images/info1.png" alt=""><a href="#home">Who Are We</a></li>
+                <li><img src="images/help1.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+                <li><img src="images/involved 1.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+                <li><img class="book" src="images/book.png" alt=""><a href="publication.html">Publication</a></li>
+                <li id="donationlink"><a href="donation.html">DONATION</a></li>
+            </div>
+        </div>
+
+         </header>
+
+
+
+
+    <div class="topictext">
+        <h2>
+            Community Development
+        </h2>
+        <p>
+            EAI works to improve the standard of life of households living in selected parts of Addis Ababa, with the intention of achieving community development through enabling beneficiaries to be self-reliant and self-sufficient.
+        </p>
+    </div>
+
+
+<div class="cards">
+    <div class="womanimpowerment">
+        <img src="images/woman.png" alt="">
+        <div class="text">
+            <h1>
+                Women Empowerment
+            </h1>
+            <p>
+                EAI strives to empower women through improving the educational, economic, social & cultural status of women.
+            </p>   
+        </div>
+    </div>
+    
+    
+
+    <div class="education">
+        <img src="images/scholarship.png" alt="">
+        <div class="text">
+            <h1>
+                Education
+            </h1>
+            <p>
+                We will provide support to increase access to quality education with a primary focus on reducing and eliminating financial barriers for girls’ education. Family members are also equipped with different skillful trainings to increase girl’s access to education and vocations.
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="health">
+        <img src="images/patient.png" alt="">
+        <div class="text">
+            <h1>
+                Health
+            </h1>
+            <p>
+                EAI is engaged in activities targeted to increase family and public awareness on hygiene and sanitation with emphasis to increase awareness on Sexual Reproductive Health (SRH). We also work towards ensuring access to clean sanitation facilities to family members.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="ICB">
+        <img src="images/buildings.png" alt="">
+        <div class="text">
+            <h1>
+                Institutional Capacity Building
+            </h1>
+            <p>
+                EAI collaborate with various actors such as CBOs, CSO and Community members through hosting capacity building trainings, providing consultations on related policies, and engaging in research on diversity and inclusion.
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="SES">
+        <img src="images/profit.png" alt="">
+        <div class="text">
+            <h1>
+                Socio-economical support 
+            </h1>
+            <p>
+                EAI works towards social and economic empowerment of vulnerable women and girls through entrepreneurial and life skills development and connect them with the necessary resources to gain socioeconomic independence. We also work with communities and local volunteers in providing aid to vulnerable families on seasonal basis.
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="CCandAA">
+        <img src="images/earth.png">
+        <div class="text">
+            <h1>
+                Climate Change and Adaptation Awareness 
+            </h1>
+            <p>
+                We strive to create and enhance the awareness of the public about the effects of climate change, how to alleviate the problem and adaptation mechanisms.
+            </p>
+        </div>
+    </div>
+    <div class="CCandAA">
+        <img src="images/earth.png">
+        <div class="text">
+            <h1>
+                Cross Cutting Issues
+            </h1>
+            <h4>
+                Age and Disability:  
+            </h4>
+            <p>
+                EAI consider age and disability as cross cutting issue in all thematic areas.  Most vulnerable aged and disabled people will be given priorities in all interventions. In line with this, EAI will also do awareness raising activities for vulnerable aged and disabled people inclusion.
+            </p>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----FOOTER--------------------------------------------------------------->
+    
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section: Donation Info -->
+        <div class="footer-donation">
+            <h3>Donation</h3>
+            <a href="donation.html">
+                <button class="donate-button">DONATE</button>
+            </a>
+        </div>
+
+        <!-- Center Section: Company and Support Links -->
+        <div class="footer-links">
+            <div class="company-links">
+                <h3>About Us</h3>
+                <ul>
+                    <li><img class="first" src="images/info.png" alt=""><a href="index.html">Who We Are</a></li>
+                    <li><img src="images/help.png" alt=""><a href="#">What We Do</a></li>
+                    <li><img src="images/involved.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+                </ul>
+            </div>
+            <div class="support-links"> 
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><img src="images/Message_light.png" alt="" srcset=""><a href="#">Ethiopiaforall2020@gmail.com</a></li>
+                    <li><img src="images/phone.png" alt=""><a href="#">+251 96 670 0009</a></li>
+                    <li><img src="images/location-pin.png" alt=""><a href="#">XP9J+9JQ Addis Ababa</a></li>
+                    <!-- <li><a href="#">Privacy Policy</a></li> -->
+                </ul>
+            </div>
+        </div>    
+        
+        <!-- Right Section: Stay Updated and Map -->
+        <div class="footer-right">
+            <div class="stay-up-to-date">
+                <h3>Stay up to date</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">
+                        <img src="images/send.png" alt="">    
+                    </button>
+                </form>
+            </div>
+            <div class="footer-map">
+                <!-- Embeded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7882.064306021976!2d38.729405495353696!3d8.96918434190648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNTgnMDYuNSJOIDM4wrA0Myc1My44IkU!5e0!3m2!1sen!2set!4v1723798404400!5m2!1sen!2set" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Ethiopia for All Initiative. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<script src="whatwedo.js"></script>
+
+</html>
