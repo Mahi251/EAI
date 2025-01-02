@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,18 +12,18 @@
 }
 
 :root {
---linear-grad:linear-gradient(to right, #4CAF4F, #044506);
---grad-clr1: #FF7B01;
---grad-clr2: #4CAF4F;
---second-color:#4CAF4F;
---main-color:#FF7B01;
+    --linear-grad: linear-gradient(to right, #4CAF4F, #044506);
+    --grad-clr1: #FF7B01;
+    --grad-clr2: #4CAF4F;
+    --second-color: #4CAF4F;
+    --main-color: #FF7B01;
 }
 
 body {
-font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-header{
+header {
     display: absolute;
     width: 100%;
     height: 150px;
@@ -37,43 +37,48 @@ header{
     transform: all .40s ease;
     border: 2px solid;
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--second-color), rgba(255, 255, 255, 0)) 1;
-    padding: 20px;    
-    }
-.navbar{
+    padding: 20px;
+}
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-around;
     background: transparent;
 }
-.nav-logo img{
+
+.nav-logo img {
     width: 150px;
 }
 
-.navbar li img{
+.navbar li img {
     width: 35px;
     height: 35px;
 }
-.navbar li{
+
+.navbar li {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.navbar a{
+.navbar a {
     color: var(--text-color-header);
     font-weight: 600;
     font-size: var(--p-font);
-    padding:10px 22px;
+    padding: 10px 22px;
     transition: all .40s ease;
     text-decoration: none;
     position: relative;
     color: #004d00;
     transition: color 0.3s ease;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     color: var(--main-color);
 }
-.navbar a::after{
+
+.navbar a::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -84,9 +89,11 @@ header{
     transition: width 0.3s ease, left 0.3s ease;
     transform: translateX(-50%);
 }
-#active_link{
+
+#active_link {
     color: var(--main-color);
 }
+
 #active_link::after {
     content: '';
     position: absolute;
@@ -94,25 +101,28 @@ header{
     bottom: -1px;
     width: 50%;
     height: 2px;
-    background-color: var(--main-color); 
+    background-color: var(--main-color);
 }
-.navbar a:hover::after{
+
+.navbar a:hover::after {
     width: 45%;
 }
 
-#donationlink a{
+#donationlink a {
     background-color: var(--main-color);
     border-radius: 5px;
     transition: all 0.3s ease;
     color: #fff;
     border: 2px solid var(--main-color);
 }
-#donationlink a:hover{
+
+#donationlink a:hover {
     background-color: #fff;
     color: var(--main-color);
     border: 2px solid var(--main-color);
 }
-#donationlink a:hover::after{
+
+#donationlink a:hover::after {
     width: 0%;
 }
 
@@ -131,14 +141,15 @@ header{
 
 
 
-.body{
+.body {
     width: 100%;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container{
+
+.container {
     position: absolute;
     display: flex;
     align-items: center;
@@ -150,7 +161,7 @@ header{
     border-radius: 20px;
 }
 
-.textbox{
+.textbox {
     align-content: center;
     text-align: center;
     height: 100%;
@@ -158,14 +169,16 @@ header{
     background-image: var(--linear-grad);
     border-radius: 20px;
 }
-.textbox h1{
+
+.textbox h1 {
     color: #fff;
 }
-.textbox p{
+
+.textbox p {
     color: #ffffff;
 }
 
-.donation-option{
+.donation-option {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -174,14 +187,16 @@ header{
     height: 100%;
     width: 100%;
 }
-.donation-options{
+
+.donation-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: (2, 1fr);
     padding-left: 20px;
     padding-right: 20px;
 }
-.donation-options button{
+
+.donation-options button {
     padding: 10px 5px;
     margin: 2px;
     background-color: #fff;
@@ -189,35 +204,42 @@ header{
     border: 1px solid #fff;
     transition: all 0.3s ease;
 }
-.donation-options button:hover{
+
+.donation-options button:hover {
     border: 1px solid var(--grad-clr1);
 }
 
 #donationOptions button.active {
-    background-color: var(--grad-clr1); /* Active background color (green) */
-    color: white; /* Active text color */
-    border-color: #fff; /* Border color matches the background */
+    background-color: var(--grad-clr1);
+    /* Active background color (green) */
+    color: white;
+    /* Active text color */
+    border-color: #fff;
+    /* Border color matches the background */
 }
 
-.donation-option p{
+.donation-option p {
     width: 100%;
     font-weight: bold;
     /* text-transform: uppercase; */
     font-size: 25px;
     color: var(--grad-clr1);
 }
-.custom-amount p{
+
+.custom-amount p {
     font-weight: 500;
     color: #00000070;
     font-size: 17px;
 }
-.custom-amount{
+
+.custom-amount {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-top: 50px;
     width: 100%;
 }
+
 .custom-amount p {
     margin-bottom: 20px;
 }
@@ -231,20 +253,21 @@ header{
     border-bottom: 2px solid transparent;
     padding: 5px;
     outline: none;
-    transition:all 0.3s ease;
+    transition: all 0.3s ease;
     text-align: center;
     border: 2px solid #FF7B01;
     /* box-shadow: inset 0px 0px 10px #00000020; */
     border-radius: 10px;
     transition: all 0.3s ease;
 }
+
 .underline {
     display: block;
     height: 2px;
     width: 0;
     background-color: var(--grad-clr1);
     margin: 5px auto;
-    transition:all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #customDonation[type="number"]:focus {
@@ -258,12 +281,12 @@ header{
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 
-.confirm-button{
+.confirm-button {
     background-color: var(--grad-clr1);
     padding: 10px 30px;
     color: #fff;
@@ -272,12 +295,48 @@ input[type="number"]::-webkit-inner-spin-button {
     transition: all 0.3s ease;
     margin: 20px;
 }
-.confirm-button:hover{
+
+.confirm-button:hover {
     background-color: #fff;
     color: var(--grad-clr1);
     border: 2px solid var(--grad-clr1);
 }
 
+#donation-firstname,
+#donation-lastname,
+#donation-email,
+input[class="donationInput"] {
+    /* margin: 20px; */
+    margin: auto 20px;
+    height: 40px;
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid #FF7B01cc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+input[type="email"]{
+    width: 95%
+}
+
+div[class="donationInput"] {
+    display: flex;
+    justify-content:space-between;
+    gap: 4px;
+    padding-top: 20px;
+}
+
+.donationInput-Email {
+    margin: 0;
+    width: 100%;
+    /* padding-left: 20px; */
+    padding-right: 20px;
+}
 
 
 
@@ -341,7 +400,8 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 5px;
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #6efe73, rgba(255, 255, 255, 0)) 1;
 }
-.footer-donation .donate-button:active{
+
+.footer-donation .donate-button:active {
     border: 2px solid #6efe73;
     border-radius: 20px;
 }
@@ -354,7 +414,8 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
     gap: 50px;
 }
-.company-links li{
+
+.company-links li {
     height: 40px;
     display: flex;
     align-self: center;
@@ -388,7 +449,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .footer-links ul li a:hover {
     color: #4CAF4F;
 }
-.footer-links img{
+
+.footer-links img {
     margin-right: 10px;
     width: 40px;
 }
@@ -396,15 +458,16 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /*---- Footer Contact us ----*/
 
-.support-links li{
+.support-links li {
     height: 40px;
     display: flex;
     align-self: center;
     text-align: center;
 }
+
 .subscribe-form {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .subscribe-form input[type="email"] {
@@ -436,7 +499,7 @@ input[type="number"]::-webkit-inner-spin-button {
     transition: background-color 0.3s ease;
 }
 
-.footer-right img{
+.footer-right img {
     opacity: 0.7;
     width: 100%;
 }
