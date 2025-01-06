@@ -31,12 +31,28 @@
             <li><img src="images/book.png" alt=""><a href="publication.html">Publication</a></li>
             <li id="donationlink"><a href="donation.html" id="active_link">DONATION</a></li>
         </ul>
+
+        <div class="dropdown">
+            <li class="menu-button" onclick="DOMContentLoaded()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </li>
+
+            <div class="small-navbar" id="navLinks" onclick="toggleDropdown()">
+                <li><img src="images/info1.png" alt=""><a href="#home">Who Are We</a></li>
+                <li><img src="images/help1.png" alt=""><a href="whatwedo.html">What We Do</a></li>
+                <li><img src="images/involved 1.png" alt=""><a href="Getinvolved.html">Get Involved</a></li>
+                <li><img class="book" src="images/book.png" alt=""><a href="publication.html">Publication</a></li>
+                <li id="donationlink"><a href="donation.html">DONATION</a></li>
+            </div>
+        </div>
     </header>
 
 
 
 
-
+    <!--     
     <div class="body">
         <div class="container" id="container">
 
@@ -58,9 +74,9 @@
                     <input type="email" id="donation-email" class="donationInput" placeholder="Enter Email Address">
                     <label class="underline"></label>
                 </div>
-                <!-- <p>A Donation of your choice</p> -->
+                
 
-                <!-- Preset donation amount buttons -->
+                
                 <div class="donation-options" id="donationOptions">
                     <button onclick="toggleAmount(this, 50)">50 Birr</button>
                     <button onclick="toggleAmount(this, 100)">100 Birr</button>
@@ -71,7 +87,7 @@
                 </div>
 
 
-                <!-- Custom donation amount input -->
+                
                 <div class="custom-amount" id="customAmount">
                     <p>Make a custom donation</p>
                     <input type="number" id="customDonation" placeholder=" Enter amount" step="50" min="0">
@@ -79,7 +95,8 @@
                     <input type="checkbox" id="stayAnonymous" onchange="toggleAnonymous()"> Stay Anonymous
                 </div>
 
-                <!-- Confirm button -->
+                
+
                 <button class="confirm-button" onclick="confirmDonation()">Confirm</button>
             </div>
             <div class="textbox">
@@ -87,9 +104,13 @@
                 <p>Help us make a difference</p>
             </div>
         </div>
+    </div> -->
+
+
+    <div class="textbox undone">
+        <h1>Donation Center</h1>
+        <p>Stay tuned... Donation page is under development.</p>
     </div>
-
-
 
 
 
